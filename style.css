@@ -1,46 +1,207 @@
-body {
-    background: #333;
-    padding-top: 5em;
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+.error {
+    text-align: center;
+}
+
+.jumbotron {
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/pictures/profile.JPG);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.jumbotron-text {
+    color: white;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.horizontal-scroller{
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.horizontal-element {
+    padding: 7% 10% 10% 10%;
+    aspect-ratio: 16/9;
+}
+
+.navbar-toggler span {
+    display: block;
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    transform: rotate(0deg);
+    left: 0;
+    opacity: 1;
+}
+
+.navbar-b.navbar-trans .nav-link, .navbar-b.navbar-reduce .nav-link {
+    color: #fff;
+}
+
+.navbar-b .navbar-brand {
+    color: #fff;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}
+
+a:active {
+    color:black;
+}
+
+.down-button {
+    color: white !important;
+}
+
+.down-button:hover {
+    color: white !important;
+}
+
+.resume-education {
+    padding: 0 0 30px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #82909c;
+    position: relative;
+}
+
+.resume-education::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #82909c;
+    border: 2px solid #82909c;
+}
+
+.resume-project {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #ac4313;
+    position: relative;
+}
+
+.resume-project::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #ac4313;
+    border: 2px solid #ac4313;
+}
+
+.resume-work {
+    padding: 0 0 10px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #1f73bd;
+    position: relative;
+}
+
+.resume-work::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #1f73bd;
+    border: 2px solid #1f73bd;
+}
+
+.resume-summary {
+    margin-left: 20px;
+    font-size: large;
+}
+
+.resume-work h5 {
+    margin-bottom: 1px;
+}
+
+.resume-education h5 {
+    margin-bottom: 1px;
+}
+
+.resume-org h5 {
+    margin-bottom: 1px;
+}
+
+footer {
+    text-align: center;
+}
+
+.navbar-expand-md.scrolled {
+    background-color: white !important;
+    transition: background-color 200ms linear;
+    border: solid;
+    border-width: 2px;
+    border-color: transparent;
+    border-bottom-color: black !important;
+}
+
+.navbar-expand-md.scrolled .nav-link {
+    color: black;
+}
+
+.navbar-brand.scrolled {
+    color: black;
+}
+
+.navbar-toggler.scrolled span{
+    display: block;
+    background-color: black;
+    height: 3px;
+    width: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    transform: rotate(0deg);
+    left: 0;
+    opacity: 1;
+}
+
+.social-media {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 40px;
 }
 
-
-.typewriter h1 {
-    color: #fff;
-    font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation:
-            typing 3.5s steps(30, end),
-            blink-caret .5s step-end infinite;
+.title-name {
+    font-size: xx-large;
 }
 
-.typewriter h2 {
-    color: #fff;
-    font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation:
-            typing 3.5s steps(30, end),
-            blink-caret .5s step-end infinite;
+.title-name-about {
+    font-size: xx-large;
+    padding: 2% 2% 2% 10%;
 }
 
-
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-}
