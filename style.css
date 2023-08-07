@@ -1,13 +1,10 @@
-@import "https://unpkg.com/open-props";
-@import "https://unpkg.com/open-props/normalize.min.css";
-
 .error {
     text-align: center;
 }
 
 .jumbotron {
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/pictures/profile.JPG);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/pictures/profile.JPG);
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
